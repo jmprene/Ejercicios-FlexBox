@@ -1,0 +1,50 @@
+img[src="public/img/flex-direction-terms.svg"] {
+  display: block;
+  height: auto;
+  margin: 2em auto;
+  max-width: 800px;
+
+  @media screen and (max-width: 800px) {
+    width: 95%;
+  }
+}
+
+/**  Componente flex-container
+ **------------------------------------------*/
+.container {
+  background-color: $accent-color;
+  height: 650px;
+  margin:.5em auto 5em auto;
+  max-width: 800px;
+
+  @media screen and (max-width: 800px) {
+    width: 95%;
+  }
+}
+
+
+
+/**  flex-items estilos de adorno
+ **------------------------------------------*/
+.item {
+  @include MaterialShadow(1);
+  background-color: $white-secondary;
+  color: $black-secondary;
+  height: 120px;
+  margin: .5em;
+  width: 120px;
+
+  &:nth-child(odd) {
+    background-color: $white-primary;
+  }
+}
+
+.text {
+  font-size: 3em;
+}
+
+.title {
+  color: $black-secondary;
+  margin: 0;
+  text-align: center;
+}

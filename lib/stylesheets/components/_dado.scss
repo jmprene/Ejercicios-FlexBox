@@ -1,0 +1,33 @@
+[class^='cara-'] {
+  @include MaterialShadow(1);
+  background-color: $default-primary-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: flex;
+  height: 120px;
+  margin: 0 auto 3em auto;
+  padding: .5em;
+  width: 120px;
+}
+
+.cara-1 {
+  justify-content: center;
+  align-items: center;
+}
+
+.cara-2 {
+  justify-content: space-between;
+  // align-items: flex-start;
+
+  .punto:nth-child(2) {
+    align-self: flex-end;
+  }
+}
+
+.punto {
+  @include MaterialShadow(1);
+  background-color: $white-secondary;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+}

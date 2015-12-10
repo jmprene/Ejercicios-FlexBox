@@ -1,0 +1,73 @@
+.flex-container {
+  display: flex; // define el contetxo flex
+  //////////////////////////////////////////////////////////////////////////////
+  // Flex-layout
+  // Automáticamente generan dos ejes.
+  // Eje principal = MAIN-AXIS
+  //   - Por defecto el MAIN-AXIS es el horizontal.
+  //
+  // Eje secundario = CROSS-AXIS
+  //   - Por defecto el CROSS-AXIS es el vertical.
+  //  Pero se pueden cambiar los ejes.
+  //////////////////////////////////////////////////////////////////////////////
+
+  flex-direction: row; // define el MAIN-AXIS
+  //////////////////////////////////////////////////////////////////////////////
+  // controla la dirección y la posición de los ejes
+  // PROPIEDADES FLEX-DIRECTION:
+  // ROW = es el que viene por defecto MAIN-AXIS(horizontal)
+  //          + reverse invierte la dirección del eje
+  // COLUMN = cambia el eje principal por el CROSS-AXIS(vertical)
+  //          + reverse invierte la dirección del eje
+  //////////////////////////////////////////////////////////////////////////////
+
+
+  justify-content: space-between; // Alinea los elementos en el eje principal
+  //////////////////////////////////////////////////////////////////////////////
+  // el valor por defecto de justify-content es flex-start.
+  // PROPIEDADES JUSTIFY-CONTENT:
+  // flex-start: manda los elementos al inicio del eje principal
+  //
+  // flex-end: manda los elementos al final del eje principal
+  // space-between: hace que el espacio entre los elementos se dstribuya
+  //   uniformemente para que ocupe todo el espacio disponible en el eje
+  //   principal.
+  //
+  // space-around: hace que el espacio alrededor los elementos se dstribuya
+  //   uniformemente para que ocupe todo el espacio disponible en el eje
+  //   principal.
+  //
+  // center: manda al centro los elementos
+  //////////////////////////////////////////////////////////////////////////////
+
+  align-items: flex-start; //Alinea los elementos respecto al CROSS-AXIS
+  // el valor por defecto de align-items es stretch.
+  //////////////////////////////////////////////////////////////////////////////
+  // PROPIEDADES ALIGN-ITEMS:
+  // stretch: rellena todo el espacio disponible en el eje secundario
+  // flex-start: manda los elementos al inicio del eje secundario
+  // flex-end: manda los elementos al final del eje secundario
+  // center: centra los elementos en base al eje secundario
+  // baseline: alinea los elementos a la linea base del texto
+  //////////////////////////////////////////////////////////////////////////////
+}
+
+.flex-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &:nth-child(2) {
+    align-self: center; // reescribe la propiedad align-items del contenedor
+    ////////////////////////////////////////////////////////////////////////////
+    // a un punico elemento definir su orientación en base al eje secundario
+    ////////////////////////////////////////////////////////////////////////////
+  }
+
+  &:nth-child(3) {
+    align-self: flex-end; // reescribe la propiedad align-items del contenedor
+    ////////////////////////////////////////////////////////////////////////////
+    // a un punico elemento definir su orientación en base al eje secundario
+    ////////////////////////////////////////////////////////////////////////////
+  }
+}
